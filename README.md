@@ -12,4 +12,5 @@ Estos dos script evitan que acidentalmente se hagan commit o push directamente s
 
   -Guarde los scripts dentro del repositorio, en el directorio .git/hooks<br/>
   -Asegurese de que los scripts tengan permisos de ejecución (chmod +x pre-push & chmod +x pre-commit)<br/>
-  -Ejecute el commando "git init" en el directorio principal del repositorio<br/>
+  -Ubiquese en la rama master y ejecute el commando "git init" en el directorio principal del repositorio<br/>
+  -Pruebe que todo está funcionando bien, haciendo git commit -a en el master (debería imprimir un msj de operación no permitida)
