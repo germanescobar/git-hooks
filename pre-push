@@ -1,0 +1,14 @@
+#!/bin/sh
+
+master_branch="refs/heads/master"
+
+echo "[pre-push] - Validing branch ..."
+
+while read local_ref local_sha remote_ref remote_sha
+do
+    if [ "$remote_ref" = "$master_branch" ]
+        then
+            echo "[*ERROR*] You are trying to push on master branch [not allowed action]"
+            exit 1
+    fi
+done

@@ -1,0 +1,12 @@
+#!/bin/sh
+
+current=$(git symbolic-ref HEAD)
+master="refs/heads/master"
+
+echo "[pre-commit] - Validing branch ..."
+
+if [ "$current" = "$master" ]
+    then
+        echo "[*ERROR*] You are trying to commit on master branch [not allowed action]"
+        exit 1
+fi
